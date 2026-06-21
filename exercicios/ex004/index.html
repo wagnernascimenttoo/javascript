@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diga seu Pais</title>
+</head>
+<body>
+    <h1>Qual Pais voce reside?</h1>
+    Digite seu Pais <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="res">
+        
+    </div>
+    <script>
+        function calcular() {
+            var txtv = window.document.getElementById('txtpais')
+            var res = window.document.querySelector('div#res')
+            var pais = String (txtv.value)
+
+            res.innerHTML = `<p>Voce e <strong>${pais}</strong></p>`
+
+            if(res == pais) 
+            res.innerHTML = 'Voce e <strong>Brasileiro</strong>'
+            
+            }
+    </script>
+    
+</body>
+</html>
