@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login B-Box</title>
+    <link rel="stylesheet" href="/frontend/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Rajdhani:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="shortcut icon" href="imagem/favicon.ico" type="image/x-icon">
+</head>
+<body class="auth-page">
+
+    <div class="container">
+        <div class="auth-card">
+            
+            <!-- LOGIN CENTRAL -->
+            <div class="auth-logo">
+                <div class="logo-icon">
+                    <img src="imagem/logo-menu05.png" alt="B-Box Logo">
+                </div>
+                <h1>B-box</h1>
+                <p class="tagline">A rede dos B-Boys &amp; B-Girls</p>
+            </div>
+
+            <!-- FORMATO DO LOGIN -->
+            <form id="login-form" class="auth-form active">
+                <h2>Entrar</h2>
+                
+                <div class="input-group">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+
+                    <input type="email" id="login-email" placeholder="E-mail" aria-label="E-mail" required>
+                </div>
+                
+                <div class="input-group">
+                    <i class="fas fa-lock" aria-hidden="true"></i>
+
+                    <input type="password" id="login-password" placeholder="Senha" aria-label="Senha" minlength="8" required>
+                </div>
+
+                <div class="lembrar-senha">
+                    <label>
+                        <input type="checkbox">
+                        Lembrar senha
+                    </label>
+                    <a href="#">Esqueci a senha</a>
+                </div>
+                
+                <button type="submit" class="btn-primary">ENTRAR</button>
+                
+                <p class="auth-switch">
+                    Não tem conta? <a href="cadastro.html">Cadastre-se</a>
+                </p>
+            </form>
+                      
+        </div> <!-- Fim do auth-card -->
+    </div> <!-- Fim do container -->
+</body>
+</html>

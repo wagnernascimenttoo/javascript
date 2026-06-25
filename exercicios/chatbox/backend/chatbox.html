@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBox - B-Box</title>
+    <link rel="stylesheet" href="/frontend/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Rajdhani:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="shortcut icon" href="imagem/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    
+     <!-- SIDEBAR NAV -->
+    <nav class="sidebar">
+        <div class="sidebar-logo">
+            <h2>B-BOX</h2>
+        </div>
+        <ul class="nav-links">
+            <li data-page="feed"><a href="feed.html" style="text-decoration: none; color: inherit;"><i class="fas fa-home"></i>Feed</a></li>
+            <li class="active" data-page="chat"><a href="chatbox.html" style="text-decoration: none; color: inherit;"><i class="fas fa-comments"></i>Chat</a></li>
+            <li data-page="gallery"><a href="galeria.html" style="text-decoration: none; color: inherit;"><i class="fas fa-book-open"></i>Galeria</a></li>
+            <li data-page="events"><a href="eventos.html" style="text-decoration: none; color: inherit;"><i class="fas fa-calendar-day"></i>Eventos</a></li>
+            <li data-page="members"><a href="membros.html" style="text-decoration: none; color: inherit;"><i class="fas fa-users"></i>Membros</a></li>
+            <li data-page="donate"><a href="Doacoes.html" style="text-decoration: none; color: inherit;"><i class="fas fa-heart"></i>Doar</a></li>
+            <li data-page="profile"><a href="perfil.html" style="text-decoration: none; color: inherit;"><i class="fas fa-user-circle"></i>Perfil</a></li>
+        </ul>
+        <div class="sidebar-notif">
+            <button class="notif-btn" id="notif-toggle" aria-label="Notificações"><i class="fas fa-bell"></i><span class="notif-badge">3</span></button>
+        </div>
+        <a href="login.html" style="text-decoration: none;"><button class="btn-logout" id="btn-logout"><i class="fas fa-sign-out-alt"></i>Sair</button></a>
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <section id="page-chat" class="page active">
+            <div class="chat-container">
+                
+                <!-- BARRA LATERAL DO CHAT -->
+                <div class="chat-sidebar">
+                    <div class="chat-search">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                        <input type="text" placeholder="Buscar conversa..." aria-label="Buscar conversa">
+                    </div>
+
+                    <ul class="chat-list">
+                        <li class="chat-item active">
+                            <div class="chat-avatar"><i class="fas fa-user-circle"></i></div>
+                            <div class="chat-preview">
+                                <strong>B-Boy Thunder</strong>
+                                <p>Vamos treinar amanhã?</p>
+                            </div>
+                            
+                            <span class="chat-time">14:30</span>
+                        </li>
+                        <li class="chat-item">
+                            <div class="chat-avatar"><i class="fas fa-user-circle"></i></div>
+                            <div class="chat-preview">
+                                <strong>B-Girl Cyclone</strong>
+                                <p>Manda o link do beat!</p>
+                            </div>
+                            <span class="chat-time">12:15</span>
+                        </li>
+                        <li class="chat-item">
+                            <div class="chat-avatar"><i class="fas fa-users"></i></div>
+                            <div class="chat-preview">
+                                <strong>Crew Spin Kings</strong>
+                                <p>Ensaio confirmado sábado</p>
+                            </div>
+                            <span class="chat-time">ontem</span>
+                        </li>
+                        <li class="chat-item">
+                            <div class="chat-avatar"><i class="fas fa-user-circle"></i></div>
+                            <div class="chat-preview">
+                                <strong>DJ BreakMaster</strong>
+                                <p>Set novo pronto!</p>
+                            </div>
+                            <span class="chat-time">ontem</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- CONTEÚDO PRINCIPAL DO CHAT -->
+                <div class="chat-main">
+                    <div class="chat-main-header">
+                        <div class="chat-avatar"><i class="fas fa-user-circle"></i></div>
+                        <div>
+                            <strong>B-Boy Thunder</strong>
+                            <span class="online-status">Online</span>
+                        </div>
+                    </div>
+                    
+                    <!-- HISTÓRICO DE MENSAGENS -->
+                    <div class="chat-messages">
+                        <div class="message received">
+                            <p>E aí mano, bora treinar amanhã no parque?</p>
+                            <span class="msg-time">14:28</span>
+                        </div>
+                        <div class="message received">
+                            <p>Quero praticar aquele combo novo de flare</p>
+                            <span class="msg-time">14:29</span>
+                        </div>
+                        <div class="message sent">
+                            <p>Bora! Que horas? Vou levar o som</p>
+                            <span class="msg-time">14:30</span>
+                        </div>
+                        <div class="message received">
+                            <p>15h tá suave? Chama a galera da crew também</p>
+                            <span class="msg-time">14:30</span>
+                        </div>
+                    </div>
+                    
+                    <!-- CAMPO DE ENTRADA DO CHAT -->
+                    <form class="chat-input" id="chat-form">
+
+                    <!--Botao enviar mensagem -->
+                        <input type="text" id="txt-message" placeholder="Digite sua mensagem..." aria-label="Mensagem">
+                        <button type="submit" aria-label="Enviar mensagem"><i class="fa fa-paper-plane"></i></button>
+                    </form>
+                </div>  
+
+            </div> <!-- Fim do chat-container -->
+        </section>
+    </main>
+
+</body>
+</html>
